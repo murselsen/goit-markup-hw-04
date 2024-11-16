@@ -69,13 +69,15 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.nav-list .nav-item .nav-link {
-  color: #2e2f42;
-}
+
 .nav-list .nav-item:hover,
 .nav-list .nav-item:focus {
   color: #404bbf;
-  padding-bottom: 28px;
+}
+.nav-list .nav-item.active {
+  color: #404bbf;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #404bbf;
 }
 
 .nav-list .nav-link {
@@ -119,11 +121,18 @@ img {
 /* Hero */
 .hero {
   height: 600px;
-  background-color: #2e2f42;
   color: #ffffff;
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.5),
+      rgba(46, 47, 66, 0.5)
+    ),
+    url('../images/people-office.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero .container {
   justify-content: center;
@@ -206,7 +215,20 @@ section .section-title {
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
+
+.container .section-list .section-item .icon {
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background-color: #f4f4fd;
+  height: 112px;
+}
+
+.container .section-list .section-item .icon svg {
+  margin: 24px 100px;
+}
+
 .container .section-list .section-item .title,
 .container .section-list .section-item .section-content .title {
   font-weight: 500;
@@ -215,7 +237,7 @@ section .section-title {
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-transform: capitalize;
-  margin-bottom: 8px;
+
   /* text-align: center; */
 }
 .container .section-list .section-item .description,
@@ -226,8 +248,43 @@ section .section-title {
   color: #434455;
   /* text-align: center; */
 }
-/* Features */
+footer .social .social-list,
+.container .section-list .section-item .section-content .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+footer .social .social-list .social-item,
+.container
+  .section-list
+  .section-item
+  .section-content
+  .social-list
+  .social-item {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  padding: 12px;
+  border-radius: 50%;
+}
+footer .social .social-list .social-item:hover,
+.container
+  .section-list
+  .section-item
+  .section-content
+  .social-list
+  .social-item:hover {
+  background-color: #31d0aa;
+  cursor: pointer;
+}
 
+/* Features */
+.features .container .section-list .section-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 /* Team */
 .team {
   background-color: #f4f4fd;
@@ -276,7 +333,13 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+footer .container {
+  display: flex;
+  gap: 120px;
+}
+footer .text {
+  display: inline;
+}
 footer .logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -289,4 +352,16 @@ footer .detail {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+footer .social {
+}
+footer .social .title {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+footer .social .social-list {
+  gap: 16px;
 }
