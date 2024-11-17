@@ -352,21 +352,7 @@ footer .social .social-list .social-item .social-link:focus,
   .social-list
   .social-item
   .social-link:focus {
-  background-color: #31d0aa;
-}
-
-footer .social .social-list .social-item .social-link svg.svg,
-.container
-  .section-list
-  .section-item
-  .section-content
-  .social-list
-  .social-item
-  .social-link
-  svg.svg {
-  fill: #f4f4fd;
-  width: 24px;
-  height: 24px;
+  background-color: #404bbf;
 }
 
 /* Features */
